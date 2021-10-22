@@ -7,6 +7,7 @@ $(document).ready(function() {
   });
 
 	$("#sort").on('change', function(){
+    console.log('ssss');
 		var sort = $(this).val();
 		var fabric = get_filter('fabric');
        var sleeve = get_filter('sleeve');
@@ -130,7 +131,7 @@ $(document).ready(function() {
 
        $.ajax({
 			url:url,
-			method:"POST",
+			method:"post",
 			data:{fabric : fabric , sleeve : sleeve, pattern : pattern, fit : fit, occasion : occasion, sort:sort,url:url},
 			success:function(data){
 				$('.filter_products').html(data);
@@ -179,11 +180,9 @@ $(document).ready(function() {
         }
 
        });
-       });
 
 
-
-       
+     });   
 
      //Update cart Items
      $(document).on('click','.btnItemUpdate',function(){
@@ -338,9 +337,11 @@ $(document).ready(function() {
       },
         
       messages: {
+        
+        
         email: {
-           required: "Veuillez saisir votre adresse E-mail",
-          email:"Veuillez saisir une adresse E-mail valide"
+        required: "Veuillez saisir votre adresse E-mail",
+        email:"Veuillez saisir une adresse E-mail valide"
       },
 
         password: {
@@ -355,5 +356,4 @@ $(document).ready(function() {
 
 
 });
-
-    }); 
+});

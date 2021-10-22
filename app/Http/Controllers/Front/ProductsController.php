@@ -95,17 +95,16 @@ class ProductsController extends Controller
 
             if (isset( $data['sort'] ) && !empty($data['sort']) ){
 
-                if ($data['sort']=="product_latest" ){
-                    $categoryProducts->orderBy('id', 'Desc');
-                }else if ($data['sort']=="product_name_a_z" ){
-                    $categoryProducts->orderBy('product_name', 'Asc');
-                }else if ($data['sort']=="product_name_z_a" ){
-                    $categoryProducts->orderBy('product_name', 'Desc');
-                }
-                else if ($data['sort']=="price_lowest" ){
-                    $categoryProducts->orderBy('product_price', 'Asc');
-                }else if ($data['sort']=="price_highest" ){
-                    $categoryProducts->orderBy('product_price', 'Desc');
+                if ($data['sort']=="product_latest"){
+                    $categoryProducts->orderBy('id','Desc');
+                }else if ($data['sort']=="product_name_a_z"){
+                    $categoryProducts->orderBy('product_name','Asc');
+                }else if ($data['sort']=="product_name_z_a"){
+                    $categoryProducts->orderBy('product_name','Desc');
+                }else if ($data['sort']=="price_lowest"){
+                    $categoryProducts->orderBy('product_price','Asc');
+                }else if ($data['sort']=="price_highest"){
+                    $categoryProducts->orderBy('product_price','Desc');
                 }
 
                 
@@ -116,7 +115,7 @@ class ProductsController extends Controller
 
             }
 
-            $categoryProducts = $categoryProducts->paginate(30);
+            $categoryProducts = $categoryProducts->paginate(70);
 
             //echo "<pre>"; print_r($categoryDetails); die ; 
 

@@ -206,7 +206,7 @@
                        <div class="form-group">
                                     
                         <label for="description">Description Produit</label>
-                    <textarea  name="description" id="description" class="form-control" rows="3" placeholder="Entrez Description Produit ..."  @if(!empty($productdata['description'])){{ $productdata['description'] }} @else {{ old('description') }} @endif ></textarea>
+                    <textarea  name="description" id="description" class="form-control" rows="3" placeholder="Entrez Description Produit ...">  @if(!empty($productdata['description'])){{$productdata['description']}} @else {{old('description')}} @endif </textarea>
                   </div>
 
 
@@ -218,7 +218,7 @@
                 <div class="form-group">
                                     
                         <label for="wash_care">Soin Lavage</label>
-                    <textarea  name="wash_care" id="wash_care" class="form-control" rows="3" placeholder="Entrez wash_care Produit ..."  @if(!empty($productdata['wash_care'])){{ $productdata['wash_care'] }} @else {{ old('wash_care') }} @endif ></textarea>
+                    <textarea  name="wash_care" id="wash_care" class="form-control" rows="3" placeholder="Entrez wash_care Produit ..." > @if(!empty($productdata['wash_care'])){{$productdata['wash_care']}} @else {{old('wash_care')}} @endif </textarea>
                   </div>
 
 
@@ -267,14 +267,15 @@
                 </div>
 
 
-                       <div class="col-12 col-sm-6">
-                        <div class="form-group">
+                <div class="col-12 col-sm-6">
+
+                  <div class="form-group">
                   <label>Selectionner Fit</label>
                   <select name="fit"  id="fit" class="form-control select2" style="width: 100%;">
                     <option value="">Selectionner</option>
                     @foreach($fitArray as $fit)
 
-                    <option value ="{{$fit}}"     @if  (!empty($productdata['fit']) && $productdata['fit']==$fit )  selected="" @endif > {{$fit}}</option>
+                    <option value ="{{$fit}}"     @if  (!empty($productdata['fit']) && $productdata['fit']==$fit )  selected="" @endif > {{$fit}} </option>
                     @endforeach
 
                   </select>

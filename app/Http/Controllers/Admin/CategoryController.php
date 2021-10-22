@@ -78,7 +78,7 @@ class CategoryController extends Controller
                 
                  'category_name.required' => "Le nom de la Categorie est obligatoire",
                  'category_name.regex'    => "Un nom de Categorie valide est Obligatoire",
-                 'section_id.required' => "Le champs Section est obligatoire",
+                 'section_id.required' => "L'ID de Section est obligatoire",
                  'url.required'    => "L'URL de Categorie est Obligatoire",
                  'category_image.image'    => "Une image de Categorie Valide est Obligatoire",
                  
@@ -98,6 +98,7 @@ class CategoryController extends Controller
                     $imagePath ='images/category_images/'.$imageName;
                     //Upload the Image
                     Image::make($image_tmp)->save($imagePath);
+
                     //save category image
                     $category->category_image = $imageName;
                 }

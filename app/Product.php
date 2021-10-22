@@ -35,7 +35,7 @@ class Product extends Model
           $productFilters['fabricArray'] = array('Coton','Maille Piqué');
           $productFilters['sleeveArray'] = array('Demi-manches','Sans manches');
           $productFilters['patternArray'] = array('Simple','Imprimé');
-          $productFilters['fitArray'] = array('Regular ','Oversize','Slim');
+          $productFilters['fitArray'] = array('Regular','Oversize','Slim');
           $productFilters['occasionArray'] = array('Casual','Formal');
 
           return $productFilters;

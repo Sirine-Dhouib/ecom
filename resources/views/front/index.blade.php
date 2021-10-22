@@ -76,7 +76,7 @@
 								<h4 style="text-align:center"><a class="btn" href="{{ url('product/'.$product['id']) }}"> <i class="icon-zoom-in"></i></a> <a class="btn" href="{{ url('product/'.$product['id']) }}">Ajouter au <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">
                                   @if ($discounted_price>0)
 									
-								<del>{{ $product['product_price'] }} TND </del>&nbsp;<font color="yellow">{{ $discounted_price }}  TND
+								<del>{{ $product['product_price'] }} TND </del>&nbsp;<font color="yellow">{{ $discounted_price }}  TND </font>
                                      @else
                                      {{ $product['product_price'] }} TND
                                      @endif
